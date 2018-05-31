@@ -6,5 +6,5 @@
   - name: checking the status
     service:
       name: httpd
-      state: started
+      state: running
     tags: service running
