@@ -1,0 +1,18 @@
+---
+- hosts: all
+  user: root
+  become: yes
+  become_method: sudo
+  vars:
+   user_pass: $6$I5C0.pSzERsO9h43$8gQL1PzLDX7MbWHQAAfCmEaxA6qxBbn3Rx67NDPXVCfYUQI91/PpXbBaYXqcWQIYjyMcBpTSW26DVpyOcByB8/
+
+  tasks:
+
+  - name: create new user
+    user:
+      name: testing
+      uid: 2222
+      comment: ansible user
+      password: "{{ user_pass }}"
+      shell: /bin/bash
+    tags: create_user
