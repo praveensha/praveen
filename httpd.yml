@@ -1,0 +1,6 @@
+---
+- name: This check status of web service
+  hosts: 192.168.1.18
+  tasks:
+  - name: checking the status
+      service: name=httpd state=Running
