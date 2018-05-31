@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.1.18
+  user: root
+  become: yes
+  tasks:
+  - name: Stopping httpd
+    service:
+      name: httpd
+      state: stopped
+    tags: service stopped
