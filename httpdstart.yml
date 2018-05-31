@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.1.18
+  user: root
+  become: yes
+  tasks:
+  - name: Started httpd
+    service:
+      name: httpd
+      state: started
+    tags: service started
