@@ -3,4 +3,6 @@
   hosts: 192.168.1.18
   tasks:
   - name: checking the status
-      service: name=httpd state=Running
+      service: 
+        name="{{ httpd_service }}"
+        state=started
